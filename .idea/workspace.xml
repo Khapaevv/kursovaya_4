@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="did HH_class">
-      <change afterPath="$PROJECT_DIR$/src/Vacancy_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="last change Vacancy_class.py">
+      <change afterPath="$PROJECT_DIR$/src/for_json_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HH_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/HH_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vacance_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/other.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/other.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vacancy_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vacancy_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,8 +170,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Vacancy_class" />
-        <item itemvalue="Python.other" />
         <item itemvalue="Python.HH_class" />
+        <item itemvalue="Python.other" />
         <item itemvalue="Python.proba" />
       </list>
     </recent_temporary>
@@ -259,7 +256,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717432878199</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="did Vacancy_class.py&#10;in file other did some methods only for practice">
+      <option name="closed" value="true" />
+      <created>1717598088191</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717598088191</updated>
+    </task>
+    <task id="LOCAL-00010" summary="last change Vacancy_class.py">
+      <option name="closed" value="true" />
+      <created>1717599330096</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717599330096</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,7 +292,9 @@
     <MESSAGE value="commit HH_class" />
     <MESSAGE value="commit poetry" />
     <MESSAGE value="did HH_class" />
-    <option name="LAST_COMMIT_MESSAGE" value="did HH_class" />
+    <MESSAGE value="did Vacancy_class.py&#10;in file other did some methods only for practice" />
+    <MESSAGE value="last change Vacancy_class.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="last change Vacancy_class.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
