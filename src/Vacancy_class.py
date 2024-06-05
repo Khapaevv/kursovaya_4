@@ -36,13 +36,38 @@ class Vacancy:
                 f'Валюта: {self.currency}\n')
 
 
+    def __gt__(self, other):
+        """Метод сравнения зарплат"""
+        if self.salary > other.salary:
+            return self
+        else:
+            return other
+
+
+    def __lt__(self, other):
+        """Метод сравнения зарплат"""
+        if self.salary < other.salary:
+            return self
+        else:
+            return other
+
 
 if __name__ == "__main__":
     klass = Vacancy("python", "https://hh.ru/vacancy/94354526",
                     {'from': 85000, 'to': 100000, 'currency': 'RUR', 'gross': False},
-                    "kjhflakhflahf;jh'fK", "RUR")
+                    "уметь много программировать", "RUR")
+
+    klass2 = Vacancy("python", "https://hh.ru/vacancy/94354526",
+                    {'from': 335000, 'to': 34100000, 'currency': 'RUR', 'gross': False},
+                    "хоть что-то уметь", "RUR")
 
     b = klass.__repr__()
-    print(b)
+    # print(b)
+    cc = klass2.__repr__()
+    # print(cc)
+    dd = klass.__gt__(klass2)
+    print(dd)
+    ee = klass.__lt__((klass2))
+    print(ee)
 
 
