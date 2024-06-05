@@ -27,14 +27,20 @@ class HHRussia(Parser):
         url = 'https://api.hh.ru/vacancies?area=113'
         response = requests.get(f'{url}&text={self.vac_name}')
         data = response.json()
-        with open("../data/vacances.json", "w") as file:
-            json.dump(data, file)
+        with open("../data/vacancies.json", "w") as file:
+            json.dump(data, file, ensure_ascii=False)
         return data
 
 
-# if __name__ == "__name__":
-# vacance = HHRussia("python")
-# vacance.load_vacancies()
-# print(vacance.load_vacancies())
+if __name__ == "__main__":
+    vacancy = HHRussia("python")
+    a = vacancy.load_vacancies()
+    # print(vacancy.load_vacancies())
+    print(a["items"][2]["name"])
+    print(a["items"][2]["salary"])
+    print(a["items"][2]["salary"]['from'])
+    print(a["items"][2]["salary"]['to'])
+    print(a["items"][2]["salary"]['currency'])
+    print(a["items"][2]["alternate_url"])
 
 
