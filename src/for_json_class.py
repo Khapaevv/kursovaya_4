@@ -5,20 +5,30 @@ import json
 class ForJsonClass(ABC):
     pass
 
-
-
+    @staticmethod
     @abstractmethod
-    def add_vacancy_like_atr(self, *args):
+    def add_vacancy_like_atr():
         pass
 
 
     @abstractmethod
-    def get_data(self, *args):
+    def get_data_from_name(cls, key_word):
+        pass
+
+    @abstractmethod
+    def get_data_from_requirement(cls, key_word):
+        pass
+
+    @abstractmethod
+    def delete_vacancy_if_not_key_word(cls, key_word):
         pass
 
 
 class AddClass(ForJsonClass):
-    pass
+    """класс для добавления объектов класса Vacancy в файл"""
+
+    filtered_from_name = []
+    filtered_from_requirement = []
 
     @staticmethod
     def add_vacancy_like_atr():
@@ -39,14 +49,40 @@ class AddClass(ForJsonClass):
                 json.dump(list_vacancies, file, sort_keys=True, indent=4, ensure_ascii=False)
 
 
+    @classmethod
+    def get_data_from_name(cls, key_word):
+            """Метод для фильтрации вакансий по ключевому слову в названии"""
+            with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
+                file = json.load(file)
+                for key_name in file:
+                    if key_word in key_name['name'].lower():
+                        cls.filtered_from_name.append(key_name)
 
-    def get_data(self, *args):
-        pass
+    @classmethod
+    def get_data_from_requirement(cls, key_word):
+            """Метод для фильтрации вакансий по ключевому слову в описании"""
+            with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
+                file = json.load(file)
+                for key_name in file:
+                    if key_word in key_name['name'].lower():
+                        cls.filtered_from_requirement.append(key_name)
+    @classmethod
+    def delete_vacancy_if_not_key_word(cls, key_word):
+        """Метод удаления объектов класса Vacancy, если в них нет ключевого слова"""
+        with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            if key_word in data:
+                with open('../data/delete_vacancy_if_not_key_word.json', 'w', encoding='utf-8') as file:
+                    json.dump(data, file, sort_keys=True, indent=4, ensure_ascii=False)
+            else:
+                pass
 
-    def delete_vacancy(self):
-        pass
 
 if __name__ == "__main__":
     proba = AddClass()
-    print(proba.add_vacancy_like_atr())
-    # print(list_vacancies)
+    # print(proba.add_vacancy_like_atr())
+    proba.get_data_from_name("разработчик")
+
+    # print(proba.filtered_from_name)
+    proba.delete_vacancy_if_not_key_word("разработчик")
+    print(proba.delete_vacancy_if_not_key_word("разработчик"))

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="change Vacancy average salary&#10;change HH_class params">
+    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="add for_json_class with add_vacancies_like_atr">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HH_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/HH_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vacancy_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vacancy_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/for_json_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/for_json_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,7 @@
     "Python.HH_class.executor": "Run",
     "Python.Vacance_class.executor": "Run",
     "Python.Vacancy_class.executor": "Run",
+    "Python.for_json_class.executor": "Run",
     "Python.other.executor": "Run",
     "Python.proba.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -56,7 +56,7 @@
       <recent name="$PROJECT_DIR$/data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Vacancy_class">
+  <component name="RunManager" selected="Python.for_json_class">
     <configuration name="HH_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kursovaya_4_1_1" />
       <option name="ENV_FILES" value="" />
@@ -93,6 +93,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Vacancy_class.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="for_json_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kursovaya_4_1_1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/for_json_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,6 +191,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.for_json_class" />
         <item itemvalue="Python.Vacancy_class" />
         <item itemvalue="Python.HH_class" />
         <item itemvalue="Python.other" />
@@ -288,7 +311,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717655100704</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add docstring Vacancy&#10;change gt, lt">
+      <option name="closed" value="true" />
+      <created>1717655780408</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717655780408</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add for_json_class with add_vacancies_like_atr">
+      <option name="closed" value="true" />
+      <created>1717686068207</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717686068207</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -312,7 +351,9 @@
     <MESSAGE value="last change Vacancy_class.py" />
     <MESSAGE value="video Vacancy_class.py" />
     <MESSAGE value="change Vacancy average salary&#10;change HH_class params" />
-    <option name="LAST_COMMIT_MESSAGE" value="change Vacancy average salary&#10;change HH_class params" />
+    <MESSAGE value="add docstring Vacancy&#10;change gt, lt" />
+    <MESSAGE value="add for_json_class with add_vacancies_like_atr" />
+    <option name="LAST_COMMIT_MESSAGE" value="add for_json_class with add_vacancies_like_atr" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
