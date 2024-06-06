@@ -32,7 +32,7 @@ class ClassForChange(AbstractClass):
 
     @staticmethod
     def add_vacancy_like_atr():
-        """Метод добавляет вакансии в файл add_vacancies.json из файла
+        """Метод добавляет объекты класса Vacancy в файл add_vacancies.json из файла
         vacancies.json (в котором находятся вся информация по ключевому слову ваканcии)"""
         list_vacancies = []
         with open("../data/vacancies.json", "r", encoding='utf-8') as file:
@@ -51,7 +51,7 @@ class ClassForChange(AbstractClass):
 
     @classmethod
     def get_data_from_name(cls, key_word):
-            """Метод для фильтрации вакансий по ключевому слову в названии"""
+            """Метод для фильтрации объектов класса Vacancy по ключевому слову в названии"""
             with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
                 file = json.load(file)
                 for key_name in file:
@@ -60,7 +60,7 @@ class ClassForChange(AbstractClass):
 
     @classmethod
     def get_data_from_requirement(cls, key_word):
-            """Метод для фильтрации вакансий по ключевому слову в описании"""
+            """Метод для фильтрации объектов класса Vacancy по ключевому слову в описании"""
             with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
                 file = json.load(file)
                 for key_name in file:
