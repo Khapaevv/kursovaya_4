@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from src.Vacancy_class import Vacancy
 import json
 
-class ForJsonClass(ABC):
+class AbstractClass(ABC):
     pass
 
     @staticmethod
@@ -24,7 +24,7 @@ class ForJsonClass(ABC):
         pass
 
 
-class AddClass(ForJsonClass):
+class ClassForChange(AbstractClass):
     """класс для добавления объектов класса Vacancy в файл"""
 
     filtered_from_name = []
@@ -79,7 +79,7 @@ class AddClass(ForJsonClass):
 
 
 if __name__ == "__main__":
-    proba = AddClass()
+    proba = ClassForChange()
     # print(proba.add_vacancy_like_atr())
     proba.get_data_from_name("разработчик")
 
