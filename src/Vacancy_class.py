@@ -20,7 +20,7 @@ class Vacancy:
                 elif not self.salary.get("from") and self.salary.get("to"):
                     self.salary = self.salary["to"]
                 elif self.salary.get("from") and self.salary.get("to"):
-                    self.salary = self.salary.get("from")
+                    self.salary = (self.salary.get("from") + self.salary.get("to"))/2
                 elif not self.salary.get("from") and not self.salary.get("to"):
                     self.salary = 0
             else:
