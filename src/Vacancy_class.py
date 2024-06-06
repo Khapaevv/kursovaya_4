@@ -4,11 +4,11 @@ class Vacancy:
     """
     vac_title: str
     vac_url: str
-    salary: str
+    salary: int
     currency: str
     requirement: str
 
-    def __init__(self, name, url, salary, requirement):
+    def __init__(self, name, url, salary, requirement='Информация отсутствует', currency=None):
         """Зарплата проверяется по всем критериям,
         если есть и from и to, то выводится среднее значение зарплаты"""
         self.name = name
@@ -19,18 +19,20 @@ class Vacancy:
                 if self.salary.get("from") and not self.salary.get("to"):
                     self.salary = self.salary.get("from")
                 elif not self.salary.get("from") and self.salary.get("to"):
-                    self.salary = self.salary["to"]
+                    self.salary = self.salary.get("to")
                 elif self.salary.get("from") and self.salary.get("to"):
-                    self.salary = (self.salary.get("from") + self.salary.get("to"))/2
+                    self.salary = int((self.salary.get("from") + self.salary.get("to"))/2)
                 elif not self.salary.get("from") and not self.salary.get("to"):
                     self.salary = 0
             else:
                 self.salary = 0
         self.requirement = requirement
-        if salary.get("currency"):
-            self.currency = salary.get('currency')
-        else:
-            self.currency = "Валюта не указана"
+        if salary is not None:
+            if salary.get("currency"):
+                self.currency = salary.get("currency")
+            else:
+                self.currency = "Валюта не указана"
+        self.currency = currency
 
 
     def __repr__(self):
@@ -62,11 +64,11 @@ if __name__ == "__main__":
 
     b = klass.__repr__()
     print(b)
-    # cc = klass2.__repr__()
-    # print(cc)
+    cc = klass2.__repr__()
+    print(cc)
     dd = klass.__gt__(klass2)
     print(dd)
-    ee = klass.__lt__((klass2))
+    ee = klass.__lt__(klass2)
     print(ee)
 
 

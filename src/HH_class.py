@@ -23,7 +23,7 @@ class HHRussia(Parser):
 
     def load_vacancies(self, url=None):
         """Метод вытаскивает вакансии по ключевому
-        слову (только по России) и складывает в json"""
+        слову вакансии (только по России) и складывает в json"""
         url = 'https://api.hh.ru/vacancies?area=113'
         params = {
             'page': 0,
@@ -31,7 +31,7 @@ class HHRussia(Parser):
         }
         response = requests.get(f'{url}&text={self.vac_name}', params)
         data = response.json()
-        with open("../data/vacancies.json", "w") as file:
+        with open("../data/vacancies.json", "w", encoding='utf-8') as file:
             json.dump(data, file, sort_keys=True, indent=4, ensure_ascii=False)
         return data
 
@@ -41,7 +41,8 @@ if __name__ == "__main__":
     a = vacancy.load_vacancies()
     # print(vacancy.load_vacancies())
     print(a["items"][8]["name"])
-    print(a["items"][8]["salary"])
+    print(a["items"][8]["id"])
+    print(a["items"][78]["salary"])
     print(a["items"][8]["salary"]['from'])
     print(a["items"][8]["salary"]['to'])
     print(a["items"][8]["salary"]['currency'])
