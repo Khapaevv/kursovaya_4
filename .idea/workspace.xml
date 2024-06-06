@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="last change Vacancy_class.py">
-      <change afterPath="$PROJECT_DIR$/src/for_json_class.py" afterDir="false" />
+    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="change Vacancy average salary&#10;change HH_class params">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HH_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/HH_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Vacancy_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vacancy_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -272,7 +272,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717599330096</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="video Vacancy_class.py">
+      <option name="closed" value="true" />
+      <created>1717609116529</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717609116529</updated>
+    </task>
+    <task id="LOCAL-00012" summary="change Vacancy average salary&#10;change HH_class params">
+      <option name="closed" value="true" />
+      <created>1717655100704</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717655100704</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -294,7 +310,9 @@
     <MESSAGE value="did HH_class" />
     <MESSAGE value="did Vacancy_class.py&#10;in file other did some methods only for practice" />
     <MESSAGE value="last change Vacancy_class.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="last change Vacancy_class.py" />
+    <MESSAGE value="video Vacancy_class.py" />
+    <MESSAGE value="change Vacancy average salary&#10;change HH_class params" />
+    <option name="LAST_COMMIT_MESSAGE" value="change Vacancy average salary&#10;change HH_class params" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

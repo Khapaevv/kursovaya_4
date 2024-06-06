@@ -9,7 +9,8 @@ class Vacancy:
     requirement: str
 
     def __init__(self, name, url, salary, requirement):
-        """Зарплата проверяется полностью, а вот для валюты такие проверки еще не сделал"""
+        """Зарплата проверяется по всем критериям,
+        если есть и from и to, то выводится среднее значение зарплаты"""
         self.name = name
         self.url = url
         self.salary = salary
@@ -41,18 +42,13 @@ class Vacancy:
 
     def __gt__(self, other):
         """Метод сравнения зарплат"""
-        if self.salary > other.salary:
-            return True
-        else:
-            return False
+        return self.salary > other.salary
 
 
     def __lt__(self, other):
         """Метод сравнения зарплат"""
-        if self.salary < other.salary:
-            return True
-        else:
-            return False
+        return self.salary < other.salary
+
 
 
 if __name__ == "__main__":
@@ -68,9 +64,9 @@ if __name__ == "__main__":
     print(b)
     # cc = klass2.__repr__()
     # print(cc)
-    # dd = klass.__gt__(klass2)
-    # print(dd)
-    # ee = klass.__lt__((klass2))
-    # print(ee)
+    dd = klass.__gt__(klass2)
+    print(dd)
+    ee = klass.__lt__((klass2))
+    print(ee)
 
 

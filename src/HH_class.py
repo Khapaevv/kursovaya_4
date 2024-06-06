@@ -4,9 +4,8 @@ import json
 
 
 class Parser(ABC):
-    """
-    Класс Parser является абсрактным классом для всех поисковых платформ
-    """
+    """Класс Parser является абсрактным классом
+    для всех поисковых платформ"""
 
     def __init__(self, vac_name):
         self.vac_name = vac_name
@@ -16,14 +15,15 @@ class Parser(ABC):
         pass
 
 class HHRussia(Parser):
-    """
-    Класс для работы с API HeadHunter России
-    """
+    """Класс для работы с API HeadHunter России"""
 
     def __init__(self, vac_name):
         super().__init__(vac_name)
 
+
     def load_vacancies(self, url=None):
+        """Метод вытаскивает вакансии по ключевому
+        слову (только по России) и складывает в json"""
         url = 'https://api.hh.ru/vacancies?area=113'
         params = {
             'page': 0,
