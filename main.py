@@ -27,6 +27,7 @@ for_requirement = check_class.get_data_from_requirement(key_word_requirement)
 if __name__ == "__main__":
     print(for_name)
     print(for_requirement)
+
     # proba = ClassForChange()
     # proba.add_vacancy_like_atr()
     # proba.get_data_from_name("разработчик")
