@@ -11,11 +11,11 @@ vacancies = hh.load_vacancies()
 check_class = ClassForChange()
 key_word_name = input('Введите ключевое слово в названии вакансии: \n')
 for_name = check_class.get_data_from_name(key_word_name)
-print(for_name)
+
 
 key_word_requirement = input('Введите ключевое слово в описании вакансии: \n')
 for_requirement = check_class.get_data_from_requirement(key_word_requirement)
-print(for_requirement)
+
 #
 #     fv1 = fv.get_data_from_name(vacancies)
 # if __name__ == "__main__":
@@ -25,12 +25,14 @@ print(for_requirement)
 #     print(for_requirement)
 
 if __name__ == "__main__":
-    proba = ClassForChange()
+    print(for_name)
+    print(for_requirement)
+    # proba = ClassForChange()
     # proba.add_vacancy_like_atr()
-    proba.get_data_from_name("разработчик")
-    print(len(proba.get_data_from_name("разработчик")))
-    print(proba.get_data_from_name("разработчик"))
-    proba.get_data_from_requirement("разработчик")
-    print(proba.get_data_from_requirement("разработчик"))
+    # proba.get_data_from_name("разработчик")
+    # print(len(proba.get_data_from_name("разработчик")))
+    # print(proba.get_data_from_name("инженер"))
+    # proba.get_data_from_requirement("Junior")
+    # print(proba.get_data_from_requirement("проект"))
     # proba.delete_vacancy_if_not_key_word("Junior")
     # print(proba.delete_vacancy_if_not_key_word("Junior"))

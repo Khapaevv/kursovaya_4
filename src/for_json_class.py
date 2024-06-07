@@ -55,7 +55,7 @@ class ClassForChange(AbstractClass):
         with open('./data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
             file = json.load(file)
             for object in file:
-                if key_word in object['name'].lower():
+                if key_word in object['name']:
                     filtered_from_name.append(object)
         return filtered_from_name
 
