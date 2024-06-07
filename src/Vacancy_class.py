@@ -51,8 +51,6 @@ class Vacancy:
         """Метод сравнения зарплат"""
         return self.salary < other.salary
 
-
-
 if __name__ == "__main__":
     klass = Vacancy("python", "https://hh.ru/vacancy/94354526",
                     {'from': 85000, 'to': 100000, 'currency': 'RUR', 'gross': False},
@@ -70,5 +68,6 @@ if __name__ == "__main__":
     print(dd)
     ee = klass.__lt__(klass2)
     print(ee)
+
 
 

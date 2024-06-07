@@ -31,7 +31,7 @@ class HHRussia(Parser):
         }
         response = requests.get(f'{url}&text={self.vac_name}', params)
         data = response.json()
-        with open("vacancies.json", "w", encoding='utf-8') as file:
+        with open("./data/vacancies.json", "w", encoding='utf-8') as file:
             json.dump(data, file, sort_keys=True, indent=4, ensure_ascii=False)
         return data
 
