@@ -51,23 +51,26 @@ class ClassForChange(AbstractClass):
 
     @classmethod
     def get_data_from_name(cls, key_word):
-            """Метод для фильтрации объектов класса Vacancy по ключевому слову в названии"""
-            with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
-                file = json.load(file)
-                for key_name in file:
-                    if key_word in key_name['name'].lower():
-                        cls.filtered_from_name.append(key_name)
+        cls.add_vacancy_like_atr()
+        """Метод для фильтрации вакансий по ключевому слову в названии"""
+        with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
+            file = json.load(file)
+            for key_name in file:
+                if key_word in key_name['name'].lower():
+                    cls.filtered_from_name.append(key_name)
 
     @classmethod
     def get_data_from_requirement(cls, key_word):
-            """Метод для фильтрации объектов класса Vacancy по ключевому слову в описании"""
-            with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
-                file = json.load(file)
-                for key_name in file:
-                    if key_word in key_name['name'].lower():
-                        cls.filtered_from_requirement.append(key_name)
+        cls.add_vacancy_like_atr()
+        """Метод для фильтрации вакансий по ключевому слову в описании"""
+        with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
+            file = json.load(file)
+            for key_name in file:
+               if key_word in key_name['name'].lower():
+                    cls.filtered_from_requirement.append(key_name)
     @classmethod
     def delete_vacancy_if_not_key_word(cls, key_word):
+        cls.add_vacancy_like_atr()
         """Метод удаления объектов класса Vacancy, если в них нет ключевого слова"""
         with open('../data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
@@ -80,9 +83,10 @@ class ClassForChange(AbstractClass):
 
 if __name__ == "__main__":
     proba = ClassForChange()
-    # print(proba.add_vacancy_like_atr())
+    # proba.add_vacancy_like_atr()
     proba.get_data_from_name("разработчик")
+    proba.get_data_from_requirement("разработчик")
 
     # print(proba.filtered_from_name)
-    proba.delete_vacancy_if_not_key_word("разработчик")
-    print(proba.delete_vacancy_if_not_key_word("разработчик"))
+    # proba.delete_vacancy_if_not_key_word("разработчик")
+    # print(proba.delete_vacancy_if_not_key_word("разработчик"))
