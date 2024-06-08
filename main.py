@@ -42,7 +42,7 @@ def user_interface():
 
 
 if __name__ == "__main__":
-    # user_interface()
+    user_interface()
 
     # check_class = ClassForChange()
     # check_class.delete_vacancy_if_not_key_word('python')
