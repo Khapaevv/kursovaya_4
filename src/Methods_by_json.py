@@ -12,7 +12,7 @@ class AbstractClass(ABC):
 
 
     @abstractmethod
-    def get_data_from_name(cls, key_word):
+    def get_data_from_name(cls, key_word, list):
         pass
 
     @abstractmethod
@@ -46,22 +46,34 @@ class ClassForChange(AbstractClass):
             with open('./data/add_vacancies_like_atr.json', 'w', encoding='utf-8') as file:
                 json.dump(list_vacancies, file, sort_keys=True, indent=4, ensure_ascii=False)
 
-
     @classmethod
-    def get_data_from_name(cls, key_word):
+    def sort_objects_by_salary(cls):
+        """Метод сортировки вакансий по зарплате в порядке возрастания"""
         cls.add_vacancy_like_atr()
-        filtered_from_name = []
-        """Метод для фильтрации вакансий по ключевому слову в названии, выводит список"""
+        sorted_salary = []
         with open('./data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
             file = json.load(file)
-            for object in file:
-                if key_word in object['name']:
-                    filtered_from_name.append(object)
+            sorted_salary = sorted(file, key=lambda object: object['salary'], reverse=True)
+        return sorted_salary
+
+
+    @classmethod
+    def top_by_salary(cls, len_top):
+        top = []
+        top = cls.sort_objects_by_salary()[:len_top]
+        return top
+
+    @classmethod
+    def get_data_from_name(cls, key_word, list):
+        """Метод для фильтрации вакансий по ключевому слову в названии, выводит список"""
+        filtered_from_name = []
+        for object in list:
+            if key_word in object['name']:
+                filtered_from_name.append(object)
         return filtered_from_name
 
     @classmethod
     def get_data_from_requirement(cls, key_word, list):
-        cls.add_vacancy_like_atr()
         filtered_from_requirement = []
         """Метод для фильтрации вакансий по ключевому слову в описании,
          из списка, полученного после get_data_from_name выводит новыый список"""
@@ -90,20 +102,3 @@ class ClassForChange(AbstractClass):
             # with open('../data/delete_vacancy_if_not_key_word.json', 'w', encoding='utf-8') as file:
             #     json.dump(list_with_key_word, file, sort_keys=True, indent=4, ensure_ascii=False)
 
-
-
-if __name__ == "__main__":
-    proba = ClassForChange()
-    # proba.add_vacancy_like_atr()
-    proba.get_data_from_name("разработчик")
-    print(len(proba.get_data_from_name("разработчик")))
-    print(proba.get_data_from_name("разработчик"))
-    proba.get_data_from_requirement("разработчик")
-    print(proba.get_data_from_requirement("разработчик"))
-    # proba.delete_vacancy_if_not_key_word("Junior")
-    # print(proba.delete_vacancy_if_not_key_word("Junior"))
-
-
-    # print(proba.filtered_from_name)
-    # proba.delete_vacancy_if_not_key_word("разработчик")
-    # print(proba.delete_vacancy_if_not_key_word("разработчик"))
