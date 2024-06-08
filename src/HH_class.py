@@ -36,16 +36,6 @@ class HHRussia(Parser):
         return data
 
 
-if __name__ == "__main__":
-    vacancy = HHRussia("python")
-    a = vacancy.load_vacancies()
-    # print(vacancy.load_vacancies())
-    print(a["items"][8]["name"])
-    print(a["items"][8]["id"])
-    print(a["items"][78]["salary"])
-    print(a["items"][8]["salary"]['from'])
-    print(a["items"][8]["salary"]['to'])
-    print(a["items"][8]["salary"]['currency'])
-    print(a["items"][8]["alternate_url"])
+
 
 

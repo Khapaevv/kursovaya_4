@@ -16,7 +16,7 @@ class AbstractClass(ABC):
         pass
 
     @abstractmethod
-    def get_data_from_requirement(cls, key_word):
+    def get_data_from_requirement(cls, key_word, list):
         pass
 
     @abstractmethod
@@ -60,16 +60,15 @@ class ClassForChange(AbstractClass):
         return filtered_from_name
 
     @classmethod
-    def get_data_from_requirement(cls, key_word):
+    def get_data_from_requirement(cls, key_word, list):
         cls.add_vacancy_like_atr()
         filtered_from_requirement = []
-        """Метод для фильтрации вакансий по ключевому слову в описании, выводит список"""
-        with open('./data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
-            file = json.load(file)
-            for object in file:
-                if object['requirement'] is not None:
-                    if key_word in object['requirement']:
-                        filtered_from_requirement.append(object)
+        """Метод для фильтрации вакансий по ключевому слову в описании,
+         из списка, полученного после get_data_from_name выводит новыый список"""
+        for object in list:
+            if object['requirement'] is not None:
+                if key_word in object['requirement']:
+                    filtered_from_requirement.append(object)
         return filtered_from_requirement
 
 
