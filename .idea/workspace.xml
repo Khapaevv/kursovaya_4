@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="add for_json_class with add_vacancies_like_atr">
+    <list default="true" id="2b5b3b8b-6ddb-464d-a054-54828edaef18" name="Changes" comment="rechange delete function in Methods_by_json.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/for_json_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/for_json_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vacancy_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vacancy_class.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Khapaevv"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="70ce21e5-137d-4ac4-ad31-5302bfc02418" />
+        <option name="url" value="https://github.com/Khapaevv/kursovaya_4_1_1.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -35,10 +52,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python tests.Python tests for tests_vacancy.test_vacancy_init.executor": "Run",
+    "Python tests.Python tests for tests_vacancy.test_vacancy_repr.executor": "Run",
+    "Python tests.Python tests in tests_vacancy.py.executor": "Run",
     "Python.HH_class.executor": "Run",
+    "Python.Methods_by_json.executor": "Run",
     "Python.Vacance_class.executor": "Run",
     "Python.Vacancy_class.executor": "Run",
     "Python.for_json_class.executor": "Run",
+    "Python.main.executor": "Run",
     "Python.other.executor": "Run",
     "Python.proba.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -52,12 +74,13 @@
       <recent name="$USER_HOME$/Desktop" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.for_json_class">
-    <configuration name="HH_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests in tests_vacancy.py">
+    <configuration name="Methods_by_json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kursovaya_4_1_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,11 +89,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/HH_class.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Methods_by_json.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,28 +124,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="for_json_class" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kursovaya_4_1_1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/for_json_class.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="kursovaya_4_1_1" />
       <option name="ENV_FILES" value="" />
@@ -145,57 +146,58 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="other" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests_vacancy.test_vacancy_init" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="kursovaya_4_1_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/other.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests_vacancy.test_vacancy_init&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="proba" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests_vacancy.test_vacancy_repr" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="kursovaya_4_1_1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/proba.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests_vacancy.test_vacancy_repr&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in tests_vacancy.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="kursovaya_4_1_1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/tests_vacancy.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.for_json_class" />
+        <item itemvalue="Python tests.Python tests in tests_vacancy.py" />
         <item itemvalue="Python.Vacancy_class" />
-        <item itemvalue="Python.HH_class" />
-        <item itemvalue="Python.other" />
-        <item itemvalue="Python.proba" />
+        <item itemvalue="Python tests.Python tests for tests_vacancy.test_vacancy_init" />
+        <item itemvalue="Python tests.Python tests for tests_vacancy.test_vacancy_repr" />
+        <item itemvalue="Python.Methods_by_json" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +329,95 @@
       <option name="project" value="LOCAL" />
       <updated>1717686068207</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add for_json_class with add_vacancies_like_atr,&#10;delete_vacancy_if_not_key_word,&#10;get_data_from_requirement,&#10;get_data_from_name">
+      <option name="closed" value="true" />
+      <created>1717689919450</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1717689919450</updated>
+    </task>
+    <task id="LOCAL-00016" summary="rename classes in for_json_class">
+      <option name="closed" value="true" />
+      <created>1717690135131</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1717690135131</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add README.md +some change for_json_class.py">
+      <option name="closed" value="true" />
+      <created>1717691548924</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1717691548924</updated>
+    </task>
+    <task id="LOCAL-00018" summary=" change for_json_class.py">
+      <option name="closed" value="true" />
+      <created>1717760900683</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1717760900683</updated>
+    </task>
+    <task id="LOCAL-00019" summary=" change way for json + litl bit main">
+      <option name="closed" value="true" />
+      <created>1717771444776</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717771444776</updated>
+    </task>
+    <task id="LOCAL-00020" summary="in main work from_name and from_requirement">
+      <option name="closed" value="true" />
+      <created>1717773617161</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717773617161</updated>
+    </task>
+    <task id="LOCAL-00021" summary="in main work from_name and from_requirement">
+      <option name="closed" value="true" />
+      <created>1717773741649</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717773741649</updated>
+    </task>
+    <task id="LOCAL-00022" summary="change get_data_from_requirement (add list argument) + some changes in main">
+      <option name="closed" value="true" />
+      <created>1717835728135</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1717835728135</updated>
+    </task>
+    <task id="LOCAL-00023" summary="for end main with rename i fogot to Methods_by_json.py">
+      <option name="closed" value="true" />
+      <created>1717847576457</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1717847576457</updated>
+    </task>
+    <task id="LOCAL-00024" summary="new README.md">
+      <option name="closed" value="true" />
+      <created>1717847857707</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1717847857707</updated>
+    </task>
+    <task id="LOCAL-00025" summary="rechange delete function in Methods_by_json.py">
+      <option name="closed" value="true" />
+      <created>1717848940055</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1717848940055</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,17 +443,16 @@
     <MESSAGE value="change Vacancy average salary&#10;change HH_class params" />
     <MESSAGE value="add docstring Vacancy&#10;change gt, lt" />
     <MESSAGE value="add for_json_class with add_vacancies_like_atr" />
-    <option name="LAST_COMMIT_MESSAGE" value="add for_json_class with add_vacancies_like_atr" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add for_json_class with add_vacancies_like_atr,&#10;delete_vacancy_if_not_key_word,&#10;get_data_from_requirement,&#10;get_data_from_name" />
+    <MESSAGE value="rename classes in for_json_class" />
+    <MESSAGE value="add README.md +some change for_json_class.py" />
+    <MESSAGE value=" change for_json_class.py" />
+    <MESSAGE value=" change way for json + litl bit main" />
+    <MESSAGE value="in main work from_name and from_requirement" />
+    <MESSAGE value="change get_data_from_requirement (add list argument) + some changes in main" />
+    <MESSAGE value="for end main with rename i fogot to Methods_by_json.py" />
+    <MESSAGE value="new README.md" />
+    <MESSAGE value="rechange delete function in Methods_by_json.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="rechange delete function in Methods_by_json.py" />
   </component>
 </project>

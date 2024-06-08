@@ -38,7 +38,7 @@ class Vacancy:
     def __repr__(self):
         return (f'Название вакансии: {self.name}\n'
                 f'Ссылка на вакансию: <{self.url}>\n'
-                f'Зарплата: {self.salary}: {self.currency}\n'
+                f'Зарплата: {self.salary}\n'
                 f'Требования: {self.requirement}\n')
 
 

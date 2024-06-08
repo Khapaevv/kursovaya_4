@@ -87,18 +87,14 @@ class ClassForChange(AbstractClass):
     @classmethod
     def delete_vacancy_if_not_key_word(cls, key_word):
         cls.add_vacancy_like_atr()
-        list_with_key_word = []
+        updated_vacancies = []
         """Метод удаления объектов класса Vacancy, если в них нет ключевого слова"""
         with open('./data/add_vacancies_like_atr.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
-            for object in data:
-                # print(object)
-                #НЕ ЗНАЮ ЧТО С КОДОМ,
-                #Почему пустой список на выходе????????
-                if key_word in object:
-                    list_with_key_word.append(object)
-            print(list_with_key_word)
-            # return list_with_key_word
-            # with open('../data/delete_vacancy_if_not_key_word.json', 'w', encoding='utf-8') as file:
-            #     json.dump(list_with_key_word, file, sort_keys=True, indent=4, ensure_ascii=False)
+        updated_vacancies = [vacancy for vacancy in data if vacancy.get('name') != key_word]
+        with open('./data/del_vacancies_like_atr.json', "w", encoding="utf-8") as f:
+                json.dump(updated_vacancies, f,  indent = 4, ensure_ascii = False)
+
+
+
 
