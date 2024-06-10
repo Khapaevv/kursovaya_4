@@ -5,6 +5,7 @@ import json
 class AbstractClass(ABC):
     pass
 
+
     @staticmethod
     @abstractmethod
     def add_vacancy_like_atr():
@@ -15,9 +16,11 @@ class AbstractClass(ABC):
     def get_data_from_name(cls, key_word, list):
         pass
 
+
     @abstractmethod
     def get_data_from_requirement(cls, key_word, list):
         pass
+
 
     @abstractmethod
     def delete_vacancy_if_not_key_word(cls, key_word):
@@ -93,8 +96,4 @@ class ClassForChange(AbstractClass):
             data = json.load(file)
         updated_vacancies = [vacancy for vacancy in data if vacancy.get('name') != key_word]
         with open('./data/del_vacancies_like_atr.json', "w", encoding="utf-8") as f:
-                json.dump(updated_vacancies, f,  indent = 4, ensure_ascii = False)
-
-
-
-
+            json.dump(updated_vacancies, f, indent=4, ensure_ascii=False)

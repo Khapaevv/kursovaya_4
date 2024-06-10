@@ -1,5 +1,4 @@
 from src.HH_class import HHRussia
-from src.Vacancy_class import Vacancy
 from src.Methods_by_json import ClassForChange
 
 
@@ -9,10 +8,7 @@ def user_interface():
 
         vac_name = input("Введите ключевое слово для общего запроса вакансий из hh.ru: \n")
         hh = HHRussia(vac_name)
-        vacancies = hh.load_vacancies()
-
         check_class = ClassForChange()
-
 
         try:
             len_top = int(input("Введите количество Топа зарплат из полученного списка: \n"))
@@ -38,13 +34,5 @@ def user_interface():
             print(item['url'])
         break
 
-
-
-
 if __name__ == "__main__":
     user_interface()
-
-    # check_class = ClassForChange()
-    # check_class.delete_vacancy_if_not_key_word('python')
-
-
