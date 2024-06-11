@@ -8,7 +8,9 @@ def user_interface():
 
         vac_name = input("Введите ключевое слово для общего запроса вакансий из hh.ru: \n")
         hh = HHRussia(vac_name)
+        hh.load_vacancies()
         check_class = ClassForChange()
+        check_class.add_vacancy_like_atr(vac_name)
 
         try:
             len_top = int(input("Введите количество Топа зарплат из полученного списка: \n"))
@@ -17,8 +19,7 @@ def user_interface():
         except ValueError:
             print('Получено некорректное значение. Нужно ввести цифру. Давай по новой!')
             break
-        top = check_class.top_by_salary(len_top)
-
+        top = check_class.top_by_salary(vac_name, len_top)
         key_word_name = input('Введите ключевое слово в названии вакансии \n(если не нужно - нажмите enter): \n')
         for_name = check_class.get_data_from_name(key_word_name, top)
         quantity_for_name = len(for_name)
