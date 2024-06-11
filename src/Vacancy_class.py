@@ -34,6 +34,21 @@ class Vacancy:
             else:
                 self.currency = "Валюта не указана"
         self.currency = currency
+        self.__validate_salary(salary)
+        self.__validate_requirement(requirement)
+
+
+    def __validate_salary(self, salary):
+        """Валидация зарплаты"""
+        if salary is not None:
+            if salary < 0:
+                raise ValueError("Зарплата не может быть отрицательной")
+
+
+    def __validate_requirement(self, requirement):
+        """Валидация требований"""
+        if not requirement:
+            raise ValueError("Требования не указаны")
 
 
     def __repr__(self):

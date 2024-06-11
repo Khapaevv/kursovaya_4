@@ -35,7 +35,6 @@ class ClassForChange(AbstractClass):
         cls.__vac_name = vac_name
 
 
-
     @classmethod
     def add_vacancy_like_atr(cls, vac_name):
         """Метод добавляет объекты класса Vacancy в файл {vac_name}_vacancies.json из файла
@@ -72,6 +71,7 @@ class ClassForChange(AbstractClass):
         top = cls.sort_objects_by_salary(vac_name)[:len_top]
         return top
 
+
     @classmethod
     def get_data_from_name(cls, key_word, list):
         """Метод для фильтрации вакансий по ключевому слову в названии, выводит список"""
@@ -80,6 +80,7 @@ class ClassForChange(AbstractClass):
             if key_word in object['name']:
                 filtered_from_name.append(object)
         return filtered_from_name
+
 
     @classmethod
     def get_data_from_requirement(cls, key_word, list):
