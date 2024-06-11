@@ -8,20 +8,21 @@ class Vacancy:
     currency: str
     requirement: str
 
+
     def __init__(self, name, url, salary, requirement='Информация отсутствует', currency=None):
         """Зарплата проверяется по всем критериям,
         если есть и from и to, то выводится среднее значение зарплаты"""
         self.name = name
         self.url = url
         self.salary = salary
-        if type(self.salary) != int:
+        if not isinstance(salary, int):
             if self.salary:
                 if self.salary.get("from") and not self.salary.get("to"):
                     self.salary = self.salary.get("from")
                 elif not self.salary.get("from") and self.salary.get("to"):
                     self.salary = self.salary.get("to")
                 elif self.salary.get("from") and self.salary.get("to"):
-                    self.salary = int((self.salary.get("from") + self.salary.get("to"))/2)
+                    self.salary = int((self.salary.get("from") + self.salary.get("to")) / 2)
                 elif not self.salary.get("from") and not self.salary.get("to"):
                     self.salary = 0
             else:
@@ -33,6 +34,23 @@ class Vacancy:
             else:
                 self.currency = "Валюта не указана"
         self.currency = currency
+        self.__validate_salary(salary)
+        self.__validate_requirement(requirement)
+
+
+    def __validate_salary(self, salary):
+        """Валидация зарплаты"""
+        if salary is not None:
+            if isinstance(salary, int):
+                if salary < 0:
+                    raise ValueError("Зарплата не может быть отрицательной")
+
+
+    def __validate_requirement(self, requirement):
+        """Валидация требований"""
+        if requirement is not None:
+            if not isinstance(requirement, str):
+                raise ValueError("Требования должны быть строкой")
 
 
     def __repr__(self):
@@ -51,6 +69,7 @@ class Vacancy:
         """Метод сравнения зарплат"""
         return self.salary < other.salary
 
+
 if __name__ == "__main__":
     klass = Vacancy("python", "https://hh.ru/vacancy/94354526",
                     {'from': 85000, 'to': 100000, 'currency': 'RUR', 'gross': False},
@@ -68,6 +87,3 @@ if __name__ == "__main__":
     print(dd)
     ee = klass.__lt__(klass2)
     print(ee)
-
-
-

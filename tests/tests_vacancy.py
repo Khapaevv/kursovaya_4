@@ -1,11 +1,13 @@
 import pytest
 from src.Vacancy_class import Vacancy
 
+
 @pytest.fixture
 def klass():
     return Vacancy("python", "https://hh.ru/vacancy/94354526",
                     {'from': 85000, 'to': 100000, 'currency': 'RUR', 'gross': False},
                     "уметь много программировать")
+
 
 @pytest.fixture
 def klass2():
@@ -44,5 +46,3 @@ def test_vacancy_gt(klass, klass2):
 
 def test_vacancy_lt(klass, klass2):
     assert klass.__lt__(klass2) is True
-
-
