@@ -41,14 +41,16 @@ class Vacancy:
     def __validate_salary(self, salary):
         """Валидация зарплаты"""
         if salary is not None:
-            if salary < 0:
-                raise ValueError("Зарплата не может быть отрицательной")
+            if isinstance(salary, int):
+                if salary < 0:
+                    raise ValueError("Зарплата не может быть отрицательной")
 
 
     def __validate_requirement(self, requirement):
         """Валидация требований"""
-        if not requirement:
-            raise ValueError("Требования не указаны")
+        if requirement is not None:
+            if not isinstance(requirement, str):
+                raise ValueError("Требования должны быть строкой")
 
 
     def __repr__(self):
